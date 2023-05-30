@@ -7,5 +7,7 @@ def uppercase(str):
             for_printing = chr(ord(str[i]) - 32)
         else:
             for_printing = str[i]
-        print(text.format(for_printing), end="")
-    print(text_null)
+        if i == len(str) - 1:
+            print(text.format(for_printing))
+        else:
+            print(text.format(for_printing), end="")
