@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def uppercase(str):
-    str = "{}"
     for i in range(len(str)):
         if ord(str[i]) > 64 and ord(str[i]) < 91:
             for_printing = str[i]
@@ -8,5 +7,5 @@ def uppercase(str):
             for_printing = chr(ord(str[i]) - 32)
         else:
             for_printing = str[i]
-        print(str.format(for_printing), end="")
-    print("")
+        print("{0}".format(for_printing), end="")
+    print()
