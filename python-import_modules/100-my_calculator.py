@@ -3,12 +3,10 @@ if __name__ == "__main__":
     import calculator_1 as calculator
     import sys
     argc = len(sys.argv)
-    print(sys.argv)
     if argc != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     operator = sys.argv[2]
-    print(argc)
     if operator == "+":
         operation = calculator.add(int(sys.argv[1]), int(sys.argv[3]))
         print("{} + {} = {}".format(sys.argv[1], sys.argv[3], operation))
