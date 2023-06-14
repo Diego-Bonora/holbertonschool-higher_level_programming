@@ -8,11 +8,14 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     jump = [".", "?", ":"]
-    for i in range(len(text)):
+    i = 0
+    while i < len(text):
         if text[i] in jump:
             print(text[i])
             print()
-        elif text[i] == " " and text[i - 1] in jump:
-            continue
+            i += 1
+            while (text[i] == " "):
+                i += 1
         else:
             print(text[i], end="")
+            i += 1
