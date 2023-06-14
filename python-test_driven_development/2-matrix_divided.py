@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+""" comentario """
+
+
 def matrix_divided(matrix, div):
+    """ comentario """
     if not isinstance(matrix, list):
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
@@ -7,20 +11,18 @@ def matrix_divided(matrix, div):
         for i in range(len(matrix)):
             equal_len = len(matrix[i])
             if not isinstance(matrix[i], list):
-                raise TypeError(
-                    "matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix \
+(list of lists) of integers/floats")
         for i in matrix:
             for x in i:
                 if not isinstance(x, int) and not isinstance(x, float):
-                    raise TypeError(
-                        "matrix must be a matrix (list of lists) of integers/floats")
+                    raise TypeError("matrix must be a matrix \
+(list of lists) of integers/floats")
         for i in matrix:
             if len(i) != equal_len:
                 raise TypeError(
                     "Each row of the matrix must have the same size")
-    if div == None:
-        return matrix
-    elif not isinstance(div, int) and not isinstance(div, float):
+    if not isinstance(div, int) and not isinstance(div, float):
         raise TypeError("div must be a number")
     elif div == 0:
         raise ZeroDivisionError("division by zero")
