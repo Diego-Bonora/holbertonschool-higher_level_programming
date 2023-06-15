@@ -3,7 +3,7 @@
 Rectangle class with private instance attrivutes and the getters and setters
 Function for returning area and perimeter of the rectangle
 __str__ prints the rectangle
-__repr__ prints the representation of the 
+__repr__ prints the representation of the
 __del__ shows a message when deleted
 """
 
