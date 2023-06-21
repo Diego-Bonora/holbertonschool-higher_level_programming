@@ -34,3 +34,19 @@ TypeError: suma must be an integer
 >>> bg.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> bg.integer_validator("suma", None)
+Traceback (most recent call last):
+TypeError: suma must be an integer
+
+>>> bg.integer_validator("suma", float('INF'))
+Traceback (most recent call last):
+TypeError: suma must be an integer
+
+>>> bg.integer_validator("suma", float('NaN'))
+Traceback (most recent call last):
+TypeError: suma must be an integer
+
+>>> bg.integer_validator("suma", 10.4)
+Traceback (most recent call last):
+TypeError: suma must be an integer
