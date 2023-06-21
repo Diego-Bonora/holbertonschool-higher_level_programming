@@ -61,4 +61,11 @@ TypeError: integer_validator() takes 3 positional arguments but 4 were given
 Traceback (most recent call last):
 NameError: name 'test' is not defined
 
+>>> bg.integer_validator("suma", (12, 45, 23))
+Traceback (most recent call last):
+TypeError: suma must be an integer
+
+>>> bg.integer_validator("suma", {12, 45, 23})
+Traceback (most recent call last):
+TypeError: suma must be an integer
 
