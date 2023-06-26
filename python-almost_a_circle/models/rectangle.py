@@ -67,7 +67,11 @@ class Rectangle(Base):
 
     def display(self):
         """ comentario """
+        for space in range(self.y):
+            print()
         for y in range(self.__height):
+            for space in range(self.x):
+                print(" ", end="")
             for x in range(self.__width):
                 print("#", end="")
             print()
