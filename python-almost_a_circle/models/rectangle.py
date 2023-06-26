@@ -1,10 +1,17 @@
 #!/usr/bin/python3
-""" comentario """
+""" Rectangle Class"""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """ comentario """
+    """
+    Rectangle:
+    width: the width of the rectangle
+    height: the height of the rectangle
+    x: the amount of spaces befor printing
+    y: the amount of spaces up befor printing
+    id: the if of the rectangle
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
@@ -62,12 +69,12 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """ comentario """
+        """ Function that returns the area of the rectangle """
         return self.__width * self.__height
 
     def display(self):
-        """ comentario """
-        for space in range(self.y):
+        """ function that displays the figure of the rectangle """
+        for jump in range(self.y):
             print()
         for y in range(self.__height):
             for space in range(self.x):
@@ -81,7 +88,7 @@ class Rectangle(Base):
             self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
-        """ comentario """
+        """ function for changing all the values at the same time """
         if args:
             if len(args) >= 1:
                 self.id = args[0]
