@@ -7,19 +7,19 @@ class Rectangle(Base):
     """ comentario """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        self.widht = width
+        self.width = width
         self.height = height
         self.x = x
         self.y = y
         super().__init__(id)
 
     @property
-    def widht(self):
-        return self.__widht
+    def width(self):
+        return self.__width
 
-    @widht.setter
+    @width.setter
     def widht(self, value):
-        self.__widht = value
+        self.__width = value
 
     @property
     def height(self):
