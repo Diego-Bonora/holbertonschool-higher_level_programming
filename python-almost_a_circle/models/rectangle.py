@@ -17,29 +17,29 @@ class Rectangle(Base):
     def widht(self):
         return self.__widht
 
-    @property
-    def height(self):
-        return self.__height
-
-    @property
-    def x(self):
-        return self.__x
-
-    @property
-    def y(self):
-        return self.__y
-
     @widht.setter
     def widht(self, value):
         self.__widht = value
+
+    @property
+    def height(self):
+        return self.__height
 
     @height.setter
     def height(self, value):
         self.__height = value
 
+    @property
+    def x(self):
+        return self.__x
+
     @x.setter
     def x(self, value):
         self.__x = value
+
+    @property
+    def y(self):
+        return self.__y
 
     @y.setter
     def y(self, value):
