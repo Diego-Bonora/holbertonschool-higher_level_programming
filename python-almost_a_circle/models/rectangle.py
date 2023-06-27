@@ -114,4 +114,5 @@ class Rectangle(Base):
                     self.y = value
 
     def to_dictionary(self):
+        """ Function that returns a dictionaty """
         return {"x": self.x, "y": self.y, "id": self.id, "height": self.height, "width": self.width}
