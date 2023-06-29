@@ -64,7 +64,7 @@ class Base():
                 dict_list = cls.from_json_string(f.read())
                 class_list = []
                 for i in dict_list:
-                    class_list.append(cls.create())
+                    class_list.append(cls.create(**i))
                 return class_list
         else:
             return []
