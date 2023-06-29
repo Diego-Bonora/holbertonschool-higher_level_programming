@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ comentario """
 import json
+import os
 
 
 class Base():
@@ -53,3 +54,17 @@ class Base():
             new_dummy = cls(1)
         new_dummy.update(**dictionary)
         return new_dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ function that returns a list of new objects from a json file """
+        filename = cls.__name__ + ".json"
+        if os.path.exists(filename):
+            with open(filename, encoding="utf-8", mode="r") as f:
+                dict_list = cls.from_json_string(f.read())
+                class_list = []
+                for i in dict_list:
+                    class_list.append(cls.create())
+                return class_list
+        else:
+            return []
