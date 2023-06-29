@@ -35,3 +35,11 @@ class Base():
 
         with open(str(filename), encoding="utf-8", mode="w+") as f:
             f.write(cls.to_json_string(dict_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ returns a list of dictionaries from a json file """
+        if not json_string:
+            return "[]"
+        else:
+            return json.loads(json_string)
