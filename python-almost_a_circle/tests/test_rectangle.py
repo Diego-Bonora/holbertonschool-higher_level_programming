@@ -44,6 +44,12 @@ class TestRectangle(unittest.TestCase):
         self.assertAlmostEqual(Rectangle.__str__(
             r2), "[Rectangle] (89) 1/3 - 4/2")
 
+    def test_ToDict(self):
+        r4 = Rectangle(10, 2, 1, 9)
+        r1_dictionary = r4.to_dictionary()
+        self.assertAlmostEqual(
+            type(r1_dictionary), dict)
+
 
 if __name__ == "__main__":
     unittest.main()
