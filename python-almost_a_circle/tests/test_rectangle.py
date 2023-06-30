@@ -57,9 +57,13 @@ class TestRectangle(unittest.TestCase):
 
     def test_ToDict(self):
         r4 = Rectangle(10, 2, 1, 9)
-        r1_dictionary = r4.to_dictionary()
+        r4_dictionary = r4.to_dictionary()
         self.assertAlmostEqual(
-            type(r1_dictionary), dict)
+            type(r4_dictionary), dict)
+
+    def test_display(self):
+        r5 = Rectangle(1, 1, 0, 0, 10)
+        self.assertAlmostEqual(r5.display(), None)
 
 
 if __name__ == "__main__":
