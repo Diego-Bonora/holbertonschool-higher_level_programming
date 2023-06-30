@@ -12,7 +12,7 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(10, 2)
         self.assertAlmostEqual(r1.width, 10)
         self.assertAlmostEqual(r1.height, 2)
-        self.assertAlmostEqual(r1.id, 3)
+        self.assertAlmostEqual(r1.id, 4)
         with self.assertRaises(TypeError):
             Rectangle(10, "2")
             Rectangle("10", 2)

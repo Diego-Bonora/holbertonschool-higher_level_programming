@@ -11,7 +11,7 @@ class TestSquare(unittest.TestCase):
     def test_CreateClass(self):
         s1 = Square(10)
         self.assertAlmostEqual(s1.width, 10)
-        self.assertAlmostEqual(s1.id, 5)
+        self.assertAlmostEqual(s1.id, 6)
         with self.assertRaises(TypeError):
             Square("10")
         with self.assertRaises(ValueError):
@@ -31,7 +31,7 @@ class TestSquare(unittest.TestCase):
     def test_Size(self):
         s2 = Square(10)
         self.assertAlmostEqual(s2.size, 10)
-        self.assertAlmostEqual(s2.id, 6)
+        self.assertAlmostEqual(s2.id, 7)
 
     def test_Print(self):
         s3 = Square(4, 2, 1, 12)
