@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Unittest for max_integer([..])
+Unittest for Base class
 """
 import unittest
 import os
@@ -10,10 +10,8 @@ from models.square import Square
 
 
 class TestBase(unittest.TestCase):
-    """ comentario """
 
     def test_create_class(self):
-        """ comentario """
         base1 = Base()
         self.assertAlmostEqual(base1.id, 1)
         base2 = Base()
