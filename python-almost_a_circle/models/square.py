@@ -19,7 +19,8 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
-        self.update(width=value, height=value)
+        self.width = value
+        self.height = value
 
     def update(self, *args, **kwargs):
         """ function for changing all the values at the same time """
