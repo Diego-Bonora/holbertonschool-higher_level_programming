@@ -6,7 +6,7 @@ import unittest
 from models.square import Square
 
 
-class TestRectangle(unittest.TestCase):
+class TestSquare(unittest.TestCase):
 
     def test_CreateClass(self):
         s1 = Square(10)
@@ -16,6 +16,17 @@ class TestRectangle(unittest.TestCase):
             Square("10")
         with self.assertRaises(ValueError):
             Square(-1)
+
+    def test_x_y(self):
+        r2 = Square(10, 4, 5, 6)
+        self.assertAlmostEqual(r2.x, 4)
+        self.assertAlmostEqual(r2.y, 5)
+        with self.assertRaises(TypeError):
+            Square(10, 12, "4")
+            Square(10, "12", 4)
+        with self.assertRaises(ValueError):
+            Square(10, 12, -4)
+            Square(10, -12, 4)
 
     def test_Size(self):
         s2 = Square(10)

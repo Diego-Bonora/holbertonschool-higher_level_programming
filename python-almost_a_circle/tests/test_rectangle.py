@@ -20,6 +20,17 @@ class TestRectangle(unittest.TestCase):
             Rectangle(10, -1)
             Rectangle(-1, 10)
 
+    def test_x_y(self):
+        r2 = Rectangle(10, 2, 4, 5, 6)
+        self.assertAlmostEqual(r2.x, 4)
+        self.assertAlmostEqual(r2.y, 5)
+        with self.assertRaises(TypeError):
+            Rectangle(10, 2, 12, "4")
+            Rectangle(10, 2, "12", 4)
+        with self.assertRaises(ValueError):
+            Rectangle(10, 2, 12, -4)
+            Rectangle(10, 2, -12, 4)
+
     def test_Area(self):
         r1 = Rectangle(8, 7, 0, 0, 12)
         self.assertAlmostEqual(r1.area(), 56)
