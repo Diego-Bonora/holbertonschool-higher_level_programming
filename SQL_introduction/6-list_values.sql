@@ -1,3 +1,3 @@
 -- prints the list
 
-select * from first_table;
+SELECT * FROM first_table;
