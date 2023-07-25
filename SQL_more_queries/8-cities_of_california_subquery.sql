@@ -1,3 +1,3 @@
 -- lists all cities from california
 
-SELECT * FROM hbtn_0d_usa.cities WHERE state_id = 1 ORDER BY id DESC;
+SELECT * FROM cities, states WHERE states.id = cities.state_id ORDER BY id DESC;
