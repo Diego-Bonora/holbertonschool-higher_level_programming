@@ -1,3 +1,3 @@
 -- lists all cities from california
 
-SELECT * FROM cities, states WHERE cities.state_id = states.id AND states.name = "California" ORDER BY cities.id ASC;
+SELECT * FROM cities WHERE (SELECT id FROM states WHERE name = "California") = state_id ORDER BY id ASC;
