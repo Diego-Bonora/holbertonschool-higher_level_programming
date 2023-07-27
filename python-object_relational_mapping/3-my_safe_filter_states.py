@@ -13,8 +13,9 @@ if __name__ == "__main__":
                          user=sys.argv[1],
                          password=sys.argv[2])
     cursor = db.cursor()
-    cursor.execute(
-        "SELECT * FROM states WHERE name = %s ORDER BY id ASC", (sys.argv[4], ))
+    input = sys.argv[4]
+    cursor.execute("SELECT * FROM states \
+        WHERE name = %s ORDER BY id ASC", (input, ))
     for row in cursor.fetchall():
         print(row)
 
