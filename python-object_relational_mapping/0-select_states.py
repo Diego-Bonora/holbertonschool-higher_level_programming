@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+# conects to a database
 if __name__ == "__main__":
     import MySQLdb
     import sys
