@@ -1,6 +1,10 @@
 #!/usr/bin/python3
-# conects to a database
+""" Conects to a database"""
+
+
 if __name__ == "__main__":
+    """ conects to a database"""
+
     import MySQLdb
     import sys
 
