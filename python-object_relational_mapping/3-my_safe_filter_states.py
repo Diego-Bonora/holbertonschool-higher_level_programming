@@ -1,20 +1,21 @@
 #!/usr/bin/python3
 """ Conects to a database"""
-import MySQLdb
-from sys import argv
 
 
 if __name__ == "__main__":
-    """ Conects to a database"""
-    db_conection = MySQLdb.connect(host='localhost',
-                                   database=argv[3],
-                                   user=argv[1],
-                                   password=argv[2])
-    cursor = db_conection.cursor()
-    mySql_select_states = "SELECT * FROM states ORDER BY id ASC"
-    cursor.execute(mySql_select_states)
-    query = argv[4]
+    """ conects to a database"""
+
+    import MySQLdb
+    import sys
+
+    db = MySQLdb.connect(host="localhost",
+                         database=sys.argv[3],
+                         user=sys.argv[1],
+                         password=sys.argv[2])
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
     for row in cursor.fetchall():
-        if row[1] == query:
+        if row[1] == sys.argv[4]:
             print("{}".format(row))
-    db_conection.close()
+
+    db.close()
