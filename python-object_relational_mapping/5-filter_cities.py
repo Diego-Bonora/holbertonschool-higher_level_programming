@@ -15,7 +15,9 @@ if __name__ == "__main__":
     cursor = db.cursor()
     str = ""
     cursor.execute(
-        "SELECT cities.name FROM states INNER JOIN cities ON cities.state_id = states.id WHERE states.name = %s", (sys.argv[4],))
+        "SELECT cities.name FROM states \
+        INNER JOIN cities ON cities.state_id = states.id \
+        WHERE states.name = %s", (sys.argv[4],))
     for row in cursor.fetchall():
         print(str, end="")
         str = ", "
