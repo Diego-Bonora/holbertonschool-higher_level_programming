@@ -19,4 +19,4 @@ if __name__ == "__main__":
     if result:
         print("{}: {}".format(1, str(result)))
     else:
-        print()
+        print("Nothing")
