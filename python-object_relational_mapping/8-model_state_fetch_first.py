@@ -16,4 +16,7 @@ if __name__ == "__main__":
     session = Session()
     result = session.query(State).first()
 
-    print("{}: {}".format(1, str(result)))
+    if result:
+        print("{}: {}".format(1, str(result)))
+    else:
+        print()
