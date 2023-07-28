@@ -14,7 +14,8 @@ if __name__ == "__main__":
                          password=sys.argv[2])
     cursor = db.cursor()
     cursor.execute(
-        "SELECT cities.id,cities.name,states.name FROM cities INNER JOIN states ON states.id = cities.state_id ORDER BY id ASC")
+        "SELECT cities.id,cities.name,states.name FROM cities\
+            INNER JOIN states ON states.id = cities.state_id ORDER BY id ASC")
     for row in cursor.fetchall():
         print("{}".format(row))
 
