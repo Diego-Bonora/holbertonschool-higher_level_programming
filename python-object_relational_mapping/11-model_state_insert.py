@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" lists from a table using SQLAlchemy """
+""" Inserts to a table using SQLAlchemy """
 from model_state import Base, State
 from sys import argv
 from sqlalchemy.orm import sessionmaker
@@ -17,5 +17,3 @@ if __name__ == "__main__":
     session.add(new)
     session.commit()
     print(new.id)
-
-    session.close()
